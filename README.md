@@ -61,7 +61,7 @@ Flags for the `add` command:
 
 # Example command to remove a specific firewall rule
 ./cli remove 1
-
+```
 
 Created By:
 - Darshan Kumar
