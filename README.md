@@ -32,7 +32,7 @@ To use the Network Firewall, follow these steps:
 5. Enjoy enhanced network security with your custom firewall rules.
 
 
-# The CLI supports the following commands:
+## The CLI supports the following commands:
 
 - `add`: Use this command to add a rule for managing packets based on specified criteria. Flags and their values should follow this command.
 - `list`: Use this command to list the active firewall rules.
