@@ -69,5 +69,5 @@ Created By:
 - Sanidhya Bhatia
 - Lakshya Joshi
   
-in Computer Networks Laboratory(CSN-341), CSE Department, IIT Roorkee.
+in Computer Networks Laboratory(CSN-361), CSE Department, IIT Roorkee.
  
