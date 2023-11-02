@@ -20,6 +20,7 @@ void generateCFile(const string& filename, unordered_map<string, string>& extraF
     file << "#include <linux/netfilter_ipv4.h>\n";
     file << "#include <linux/fs_struct.h>\n";
     file << "#include <net/ip.h>\n";
+    file << "#include <net/tcp.h>\n";
     file << "#include <linux/tcp.h>\n";
     file << "#include <linux/string.h>\n";
     file << "#include <linux/pid.h>\n";
@@ -138,8 +139,9 @@ void generateCFile(const string& filename, unordered_map<string, string>& extraF
         file << "\ttcph = tcp_hdr(skb);\n";
         file << "\tif(iph->protocol == IPPROTO_TCP){\n";
         file << "\t\tint sdif = inet_sdif(skb);\n";
-        file << "\t\tbool refcounted\n";
-        file << "\t\tstruct sock *sk = __inet_lookup_skb(&tcp_hashinfo, skb, tcph->source, tcph->dest, sdif, &refcounted);\n";
+        file << "\t\tbool refcounted;\n";
+        file << "\t\tstruct sock *sk = __inet_lookup_skb(&tcp_hashinfo, skb,__tcp_hdrlen(tcph), tcph->source, tcph->dest, sdif, &refcounted);\n";
+        file << "\t\tstruct socket *sock = NULL;\n";
         file << "\t\tif(sk){\n";
         file << "\t\t\tsock = sk->sk_socket;\n";
         file << "\t\t}\n";
