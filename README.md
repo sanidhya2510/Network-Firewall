@@ -23,9 +23,9 @@ To use the Network Firewall, follow these steps:
 
 1. Clone or download this repository to your Linux machine.
 
-2. Compile the required kernel modules and the CLI by running the provided build scripts.
+2. Compile the required kernel modules and the CLI by `g++ cli.cpp -o firewall`.
 
-3. Load the necessary kernel modules into the kernel using the provided scripts.
+3. Download necessary linux-headers.
 
 4. Use the CLI to pass commands to the kernel modules for managing network packets based on your requirements.
 
@@ -51,16 +51,16 @@ Flags for the `add` command:
 
 ```bash
 # Example command to add a rule for managing all packets from 192.168.1.100 to port 80
-./cli add -p tcp -s 192.168.1.100 -port 80
+./firewall add -p tcp -s 192.168.1.100 -port 80
 
 # Example command to list active firewall rules
-./cli list
+./firewall list
 
 # Example command to clear all firewall rules
-./cli clear
+./firewall clear
 
 # Example command to remove a specific firewall rule
-./cli remove 1
+./firewall remove 1
 ```
 
 Created By:
@@ -69,5 +69,5 @@ Created By:
 - Sanidhya Bhatia
 - Lakshya Joshi
   
-in Computer Networks Laboratory(CSN-361), CSE Department, IIT Roorkee.
+in Computer Networks Laboratory(CSN-361), Computer Science and Engineering Department, IIT Roorkee.
  

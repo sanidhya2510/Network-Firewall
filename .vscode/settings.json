@@ -1,0 +1,14 @@
+{
+  "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+  "files.associations": {
+    "*.ejs": "html",
+    "*.sol": "solidity",
+    "*.c": "c",
+    "module.h": "c",
+    "ip.h": "c",
+    "netfilter_ipv4.h": "c",
+    "inet.h": "c",
+    "icmp.h": "c",
+    "tcp.h": "c"
+  }
+}
